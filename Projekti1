@@ -31,79 +31,79 @@ public class TapCode {
 		{
 		switch (array[i]) {
 		case 'a': 
-			System.out.println(". .   ");
+			System.out.printf(". .   ");
 			break;
 		case 'b': 
-			System.out.println(". ..   ");
+			System.out.printf(". ..   ");
 			break;
 		case 'c': 
-			System.out.println(". ...   ");
+			System.out.printf(". ...   ");
 			break;
 		case 'd': 
-			System.out.println(". ....   ");
+			System.out.printf(". ....   ");
 			break;
 		case 'e': 
-			System.out.println(". .....   ");
+			System.out.printf(". .....   ");
 			break;
 		case 'f': 
-			System.out.println(".. .   ");
+			System.out.printf(".. .   ");
 			break;
 		case 'g': 
-			System.out.println(".. ..   ");
+			System.out.printf(".. ..   ");
 			break;
 		case 'h': 
-			System.out.println(".. ...  ");
+			System.out.printf(".. ...  ");
 			break;
 		case 'i': 
-			System.out.println(".. ....   ");
+			System.out.printf(".. ....   ");
 			break;
 		case 'j': 
-			System.out.println(".. .....   ");
+			System.out.printf(".. .....   ");
 			break;
 		case 'l': 
-			System.out.println("... .   ");
+			System.out.printf("... .   ");
 			break;
 		case 'm': 
-			System.out.println("... ..   ");
+			System.out.printf("... ..   ");
 			break;
 		case 'n': 
-			System.out.println("... ...   ");
+			System.out.printf("... ...   ");
 			break;
 		case 'o': 
-			System.out.println("... ....   ");
+			System.out.printf("... ....   ");
 			break;
 		case 'p': 
-			System.out.println("... .....   ");
+			System.out.printf("... .....   ");
 			break;
 		case 'q': 
-			System.out.println(".... .   ");
+			System.out.printf(".... .   ");
 			break;
 		case 'r': 
-			System.out.println(".... ..   ");
+			System.out.printf(".... ..   ");
 			break;
 		case 's': 
-			System.out.println(".... ...   ");
+			System.out.printf(".... ...   ");
 			break;
 		case 't': 
-			System.out.println(".... ....   ");
+			System.out.printf(".... ....   ");
 			break;
 		case 'u': 
-			System.out.println(".... .....   ");
+			System.out.printf(".... .....   ");
 			break;
 		case 'v': 
-			System.out.println("..... .   ");
+			System.out.printf("..... .   ");
 			break;
 		case 'w': 
-			System.out.println("..... ..   ");
+			System.out.printf("..... ..   ");
 			break;
 		case 'x': 
-			System.out.println("..... ...   ");
+			System.out.printf("..... ...   ");
 			break;
 		case 'y': 
-			System.out.println("..... ....   ");
+			System.out.printf("..... ....   ");
 			break;
 		case 'z': 
-			System.out.println("..... .....   ");
+			System.out.printf("..... .....   ");
 			break;
 			
 		default:
