@@ -1,1 +1,116 @@
+package ushtrime4;
+
+import java.util.Scanner;
+
+public class TapCode {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input=new Scanner(System.in);
+		String[][] Alphabet= {
+				{"a" ,"b","c", "d", "e"},
+				{ "f" ,"g", "h","i","j" },
+				{"l" ,"m","n" ,"o","p" },
+				{ "q" ,"r" ,"s" ,"t","u" },
+				{"v" ,"w", "x","y" ,"z"}
+				
+		};
+		for(int i=0;i<Alphabet.length;i++)
+			for(int j=0;j<Alphabet.length;j++)
+			{
+				System.out.printf(Alphabet[i][j]);
+				
+			}
+		System.out.println("\n\nJep nje emer : ");
+		String emri=input.next();
+		
+
+		for(int i=0;i<emri.length();i++)
+		{
+		switch (emri) {
+		case "a": 
+			System.out.println(". .   ");
+			break;
+		case "b": 
+			System.out.println(". ..   ");
+			break;
+		case "c": 
+			System.out.println(". ...   ");
+			break;
+		case "d": 
+			System.out.println(". ....   ");
+			break;
+		case "e": 
+			System.out.println(". .....   ");
+			break;
+		case "f": 
+			System.out.println(".. .   ");
+			break;
+		case "g": 
+			System.out.println(".. ..   ");
+			break;
+		case "h": 
+			System.out.println(".. ...  ");
+			break;
+		case "i": 
+			System.out.println(".. ....   ");
+			break;
+		case "j": 
+			System.out.println(".. .....   ");
+			break;
+		case "l": 
+			System.out.println("... .   ");
+			break;
+		case "m": 
+			System.out.println("... ..   ");
+			break;
+		case "n": 
+			System.out.println("... ...   ");
+			break;
+		case "o": 
+			System.out.println("... ....   ");
+			break;
+		case "p": 
+			System.out.println("... .....   ");
+			break;
+		case "q": 
+			System.out.println(".... .   ");
+			break;
+		case "r": 
+			System.out.println(".... ..   ");
+			break;
+		case "s": 
+			System.out.println(".... ...   ");
+			break;
+		case "t": 
+			System.out.println(".... ....   ");
+			break;
+		case "u": 
+			System.out.println(".... .....   ");
+			break;
+		case "v": 
+			System.out.println("..... .   ");
+			break;
+		case "w": 
+			System.out.println("..... ..   ");
+			break;
+		case "x": 
+			System.out.println("..... ...   ");
+			break;
+		case "y": 
+			System.out.println("..... ....   ");
+			break;
+		case "z": 
+			System.out.println("..... .....   ");
+			break;
+			
+		default:
+			throw new IllegalArgumentException("Unexpected value: " + emri);
+		}
+		
+		}
+	input.close();
+	}
+
+}
 
