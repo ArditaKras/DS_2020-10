@@ -23,84 +23,86 @@ public class TapCode {
 			}
 		System.out.println("\n\nJep nje emer : ");
 		String emri=input.next();
+		char array[]=new char[15];
+		emri.getChars(0,emri.length(),array,0);
 		
 
 		for(int i=0;i<emri.length();i++)
 		{
-		switch (emri) {
-		case "a": 
+		switch (array[i]) {
+		case 'a': 
 			System.out.println(". .   ");
 			break;
-		case "b": 
+		case 'b': 
 			System.out.println(". ..   ");
 			break;
-		case "c": 
+		case 'c': 
 			System.out.println(". ...   ");
 			break;
-		case "d": 
+		case 'd': 
 			System.out.println(". ....   ");
 			break;
-		case "e": 
+		case 'e': 
 			System.out.println(". .....   ");
 			break;
-		case "f": 
+		case 'f': 
 			System.out.println(".. .   ");
 			break;
-		case "g": 
+		case 'g': 
 			System.out.println(".. ..   ");
 			break;
-		case "h": 
+		case 'h': 
 			System.out.println(".. ...  ");
 			break;
-		case "i": 
+		case 'i': 
 			System.out.println(".. ....   ");
 			break;
-		case "j": 
+		case 'j': 
 			System.out.println(".. .....   ");
 			break;
-		case "l": 
+		case 'l': 
 			System.out.println("... .   ");
 			break;
-		case "m": 
+		case 'm': 
 			System.out.println("... ..   ");
 			break;
-		case "n": 
+		case 'n': 
 			System.out.println("... ...   ");
 			break;
-		case "o": 
+		case 'o': 
 			System.out.println("... ....   ");
 			break;
-		case "p": 
+		case 'p': 
 			System.out.println("... .....   ");
 			break;
-		case "q": 
+		case 'q': 
 			System.out.println(".... .   ");
 			break;
-		case "r": 
+		case 'r': 
 			System.out.println(".... ..   ");
 			break;
-		case "s": 
+		case 's': 
 			System.out.println(".... ...   ");
 			break;
-		case "t": 
+		case 't': 
 			System.out.println(".... ....   ");
 			break;
-		case "u": 
+		case 'u': 
 			System.out.println(".... .....   ");
 			break;
-		case "v": 
+		case 'v': 
 			System.out.println("..... .   ");
 			break;
-		case "w": 
+		case 'w': 
 			System.out.println("..... ..   ");
 			break;
-		case "x": 
+		case 'x': 
 			System.out.println("..... ...   ");
 			break;
-		case "y": 
+		case 'y': 
 			System.out.println("..... ....   ");
 			break;
-		case "z": 
+		case 'z': 
 			System.out.println("..... .....   ");
 			break;
 			
@@ -113,4 +115,3 @@ public class TapCode {
 	}
 
 }
-
