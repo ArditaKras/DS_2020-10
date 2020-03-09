@@ -11,7 +11,7 @@ public class ushtro {
     String teksti = "";
     String tekstiRi = "";
 
-    System.out.println("Enter text you want to change to Morse code");
+    System.out.println("\n$ ds morse-code encode");
     teksti = input.nextLine();
     
     teksti = teksti.toLowerCase();
