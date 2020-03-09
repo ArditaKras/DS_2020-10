@@ -13,7 +13,7 @@ public class TapCode {
 		emri=input.nextLine();
 		
 		
-		emri.toLowerCase();
+		emri=emri.toLowerCase();
 		
 		System.out.println("\nTap Code : ");
 		char array[]=new char[20];
