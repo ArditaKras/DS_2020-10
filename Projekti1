@@ -8,7 +8,7 @@ public class TapCode {
 		// TODO Auto-generated method stub
 		Scanner input = new Scanner(System.in);
 		String emri ="";
-		System.out.println("\nWrite Something: ");
+		System.out.println("\n$ ds tap-code encode ");
 		
 		emri=input.nextLine();
 		
