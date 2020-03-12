@@ -6,6 +6,7 @@ Kjo (DS_2020-10) eshte repository e krijuar nga grupi i 10,kontribues te se cili
 -Ardita Krasniqi
 
 Repository e tille ka te beje me teknikat klasike te enkriptimit dhe dekriptimit.
+
 *Enkriptimi është një proces i cili të dhënën me përmbajtje të dukshme
 (te kuptueshme nga te gjitha palet) e transformon në të dhënë të koduar, 
 përmbajtja e së cilës do të jetë e pamundur të lexohet pa posedimin e “çelësit”. 
