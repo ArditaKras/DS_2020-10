@@ -18,8 +18,11 @@ së dukshme të të dhënës nga e dhëna e koduar përmes përdorimit të çel�
 Zakonisht çelësi duhet të jetë informatë sekrete.
 
 Nder Kodet me te thjeshta për të koduar/dekoduar mesazhet te paraqitura ne kete Repository jane:
+
 -Tap Code
+
 -Morse Code 
+
 -Vigenere Code
 
 1. Udhëzimet për ekzekutimin e programit. 
