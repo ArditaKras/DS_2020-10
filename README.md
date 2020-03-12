@@ -14,5 +14,10 @@ përmbajtja e së cilës do të jetë e pamundur të lexohet pa posedimin e “�
 së dukshme të të dhënës nga e dhëna e koduar përmes përdorimit të çelësit. 
 Zakonisht çelësi duhet të jetë informatë sekrete.
 
+Nder Kodet me te thjeshta për të koduar/dekoduar mesazhet te paraqitura ne kete Repository jane:
+-Tap Code
+-Morse Code 
+-Vineger Code
+
 
 
