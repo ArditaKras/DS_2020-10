@@ -2,11 +2,9 @@
 
 Kjo (DS_2020-10) eshte repository e krijuar nga grupi i 10,kontribues te se cilit jane:
 
--Albina Zekaj
-
--Endrit Balaj
-
--Ardita Krasniqi
+-Albina Zekaj,
+Endrit Balaj,
+Ardita Krasniqi
 
 Repository e tille ka te beje me teknikat klasike te enkriptimit dhe dekriptimit.
 
