@@ -36,6 +36,8 @@ https://www.youtube.com/watch?v=lXVE34i-QMc(Tutorial - How To: Create a Simple J
 Opsionet për krijimin e projektit, ekzekutimin dhe debug-imin janë  të qasshme përmes 
 menyve mirëpo edhe përmes shiritit  të veglave.
 
+Per te ekzekutuar programin shfrytezohen Run and Debug toolbar komandat.
+
 
 
 
