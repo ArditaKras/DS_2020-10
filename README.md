@@ -1,12 +1,13 @@
 # Grupi10
 
-Kjo (DS_2020-10) eshte repository e krijuar nga grupi i 10,kontribues te se cilit jane:
+Kjo (DS_2020-10) eshte repository qe ka te beje me teknikat klasike te enkriptimit dhe dekriptimit. e krijuar nga grupi i 10,
+kontribues te se cilit jane:
 
 -Albina Zekaj,
 Endrit Balaj,
 Ardita Krasniqi
 
-Repository e tille ka te beje me teknikat klasike te enkriptimit dhe dekriptimit.
+
 
 *Enkriptimi është një proces i cili të dhënën me përmbajtje të dukshme
 (te kuptueshme nga te gjitha palet) e transformon në të dhënë të koduar, 
