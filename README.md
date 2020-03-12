@@ -19,5 +19,21 @@ Nder Kodet me te thjeshta për të koduar/dekoduar mesazhet te paraqitura ne ket
 -Morse Code 
 -Vigenere Code
 
+1. Udhëzimet për ekzekutimin e programit. 
+
+Per te realizuar programin shfrytezojme gjuhen programuese Java ,perkatesisht applikacionin
+Eclipse Java 2019-09 ,ne kuader te paketes IDE ,qe mund te downlodohet permes linkut :
+https://eclipse.org/downloads/eclipse-packages/
+https://www.youtube.com/watch?v=lXVE34i-QMc(Tutorial - How To: Create a Simple Java Program Using Eclipse)
+
+Krijimi i programit:
+Brenda Eclipse zgjidhni artikullin e menusë File> New> Project ...
+
+
+ 
+ 
+ 
+
+
 
 
