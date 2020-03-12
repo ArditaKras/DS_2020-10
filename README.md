@@ -14,3 +14,5 @@ përmbajtja e së cilës do të jetë e pamundur të lexohet pa posedimin e “�
 së dukshme të të dhënës nga e dhëna e koduar përmes përdorimit të çelësit. 
 Zakonisht çelësi duhet të jetë informatë sekrete.
 
+
+
