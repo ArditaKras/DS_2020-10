@@ -26,8 +26,8 @@ Eclipse Java 2019-09 ,ne kuader te paketes IDE ,qe mund te downlodohet permes li
 https://eclipse.org/downloads/eclipse-packages/
 https://www.youtube.com/watch?v=lXVE34i-QMc(Tutorial - How To: Create a Simple Java Program Using Eclipse)
 
-Krijimi i programit:
-Brenda Eclipse zgjidhni artikullin e menusë File> New> Project ...
+
+
 
 
  
