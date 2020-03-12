@@ -17,7 +17,7 @@ Zakonisht çelësi duhet të jetë informatë sekrete.
 Nder Kodet me te thjeshta për të koduar/dekoduar mesazhet te paraqitura ne kete Repository jane:
 -Tap Code
 -Morse Code 
--Vineger Code
+-Vigenere Code
 
 
 
