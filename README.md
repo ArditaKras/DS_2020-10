@@ -1,6 +1,6 @@
 # Grupi10
 
-Kjo (DS_2020-10) eshte repository qe ka te beje me teknikat klasike te enkriptimit dhe dekriptimit. e krijuar nga grupi i 10,
+Kjo (DS_2020-10) eshte repository qe ka te beje me teknikat klasike te enkriptimit dhe dekriptimit, e krijuar nga grupi i 10,
 kontribues te se cilit jane:
 
 -Albina Zekaj,
