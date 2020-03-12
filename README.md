@@ -41,6 +41,9 @@ menyve mirëpo edhe përmes shiritit  të veglave.
 
 Per te ekzekutuar programin shfrytezohen Run and Debug toolbar komandat.
 
+ 
+
+
 
 
 
