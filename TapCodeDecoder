@@ -1,8 +1,5 @@
 
 public class TapCodeDecoder {
-
-	 
-	
 		
 		
 		public static String tapCodeDekodimi(String tapTeksti) {
