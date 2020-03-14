@@ -33,3 +33,67 @@ public class ushtro {
     System.out.println(tekstiRi);
   }
 }
+
+//Mundesia e dyte 
+//import java.util.HashMap;
+//import java.util.Scanner;
+
+//public class enkodimi {
+//private static HashMap<String, String> morsealphabet;
+   // private static String[] morse ={".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.."};
+  
+   // public static void main(String[] args) {
+       //startConvertion();
+   // }
+   // public static void startConvertion(){
+      //  System.out.println(" MORSE CODE CONVERTER");
+      //  System.out.println("************************************\n");
+        
+      //  System.out.print("Shkruani tekstin qe deshironi te enkodoni:\n");
+      //  Scanner scanner = new Scanner(System.in);
+	//String line = scanner.nextLine();
+    //    System.out.println("------------------------");
+     //   System.out.println("MORSE CODE:");
+	//	prepareAlphabet();
+		
+	//	if(!line.isEmpty()){
+		//    showMorseCode(line);
+              //      System.out.println("\n------------------------");
+               //     System.out.println("\n Enkodimi eshte kryer!");
+               //     System.out.println("Deshironi te konvertoni perseri? Shtypni(1)nese PO    (2)nese JO");
+               //     Scanner yn = new Scanner(System.in);
+               //     String choice = yn.nextLine();
+                //    if ("1".equals(choice)){
+                //        startConvertion();
+                 //   }
+                 //   else{
+                 //       System.out.println("\n Faleminderit per perdorim te MORSE CONVERTION");
+                 //   }
+//		}
+ //   }
+ //   public static void prepareAlphabet() {
+	//   morsealphabet = new HashMap<String, String>();
+	    
+	  //  for(int i = 97, b=0; i<=122;i++, b++) {
+	  //      String s = Character.toString((char) i);
+	   //     morsealphabet.put(s, morse[b]);
+	  //  }
+	//}
+	
+	//public static void showMorseCode(String line){
+	 //   for(int i=0; i< line.length(); i++){
+	  //     char c =  line.charAt(i);
+	    //   if (Character.toString(c).matches("[a-zA-Z]+") && Character.isLetter(c)) {
+	    	   
+               //    System.out.print(morsealphabet.get(Character.toString(c).toLowerCase())+ " / ");
+	    //   }
+	  //  }
+//}
+//}
+
+
+
+
+
+
+
