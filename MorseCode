@@ -17,7 +17,7 @@ public class ushtro {
     teksti = teksti.toLowerCase();
       
     for (int i = 0; i < teksti.length(); i++) {
-      for (short j = 0; j < 50; j++) {
+      for (int j = 0; j < 50; j++) {
         if (teksti.charAt(i) == alfabeti[j]) {
           tekstiRi += morseLetters[j];
           tekstiRi += "   ";
