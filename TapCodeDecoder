@@ -1,1 +1,46 @@
 
+public class TapCodeDecoder {
+
+	 
+	
+		
+		
+		public static String tapCodeDekodimi(String tapTeksti) {
+
+			String[] splittapTeksti = tapTeksti.split(" ");
+			
+			  String rezultati = "";
+			       for(int i=0;i<splittapTeksti.length;i=i+2) {
+				// x per boshtin x
+				//y per boshtin y
+			
+			int y = splittapTeksti[i].length();
+			
+			int x = splittapTeksti[i+1].length();
+			
+			int total = 'A'-1 + (y-1)*5 + x ;
+			
+			if(total >= 'K')
+			       {total = total + 1;}
+			rezultati += (char) total;
+			}
+			
+			return rezultati;
+		}
+		
+		
+		public static void main(String[] args) {
+
+	
+			
+			System.out.println(tapCodeDekodimi(". . .... .. . .... .. .... .... .... . ."));
+			System.out.println(tapCodeDekodimi(". ... .... .. . . .... ... ... ... .. .... .... . .. ...."));
+			}
+				
+		
+		
+	
+
+	}
+
+
