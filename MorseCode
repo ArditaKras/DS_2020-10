@@ -93,15 +93,17 @@ public class ushtro {
 	  //  }
 	//}
 	
-	//public static void showMorseCode(String line){
-	 //   for(int i=0; i< line.length(); i++){
+	// public static void showMorseCode(String line){
+	   // for(int i=0; i< line.length(); i++){
 	  //     char c =  line.charAt(i);
-	    //   if (Character.toString(c).matches("[a-zA-Z]+") && Character.isLetter(c)) {
-	    	   
-               //    System.out.print(morsealphabet.get(Character.toString(c).toLowerCase())+ " / ");
-	    //   }
+	//       if (Character.toString(c).matches("[a-zA-Z]+") && Character.isLetter(c)) {
+		//	System.out.print(morsealphabet.get(Character.toString(c).toLowerCase())+"  ");
+	      // }
+	    //   else {
+	    //	 	  System.out.print(" / ");
+	    //   	    }
+	       
 	  //  }
-//}
 //}
 
 
