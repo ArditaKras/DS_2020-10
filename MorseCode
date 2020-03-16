@@ -16,6 +16,17 @@ public class ushtro {
     
     
     teksti = teksti.toLowerCase();
+    String[] argspliter = text.split(" ", 4);
+
+		//per error  
+		if(!argspliter[0].equals("ds") || argspliter.length != 4) {
+			throw new IllegalArgumentException("Syntax invalid! Mungojne argumentet!");
+		}else if(!argspliter[1].equals("morse-code")){
+			throw new IllegalArgumentException("Mungon tipi enkodimit!");
+		}
+		
+
+		text = argspliter[3];
       
     for (int i = 0; i < teksti.length(); i++) {
       for (int j = 0; j < 50; j++) {
