@@ -7,18 +7,34 @@ public class TapCode {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner input = new Scanner(System.in);
-		String emri ="";
+		String emriPlote ="";
 		System.out.println("\n$ ds tap-code encode ");
 		
-		emri=input.nextLine();
+		emriPlote=input.nextLine();
 		
 		
-		emri=emri.toLowerCase();
 		
-		System.out.println("\nTap Code : ");
-		char array[]=new char[20];
-		emri.getChars(0,emri.length(),array,0);
+		input.close();
 		
+		
+		  String[] argspliter = emriPlote.split(" ", 4);
+
+			//per error  
+			if(!argspliter[0].equals("ds") || argspliter.length != 4) {
+				throw new IllegalArgumentException("Syntax invalid! Mungojne argumentet!");
+			}else if(!argspliter[1].equals("tap-code")){
+				throw new IllegalArgumentException("Mungon tipi enkodimit!");
+			}
+			
+
+			String emri = argspliter[3];
+			emri=emri.toLowerCase();
+			
+			System.out.println("\nTap Code : ");
+			char array[]=new char[20];
+			emri.getChars(0,emri.length(),array,0);
+			
+
 
 		for(int i=0;i<emri.length();i++)
 		{
@@ -111,7 +127,7 @@ public class TapCode {
 		}
 		
 		}
-	input.close();
+	
 	}
 
 }
