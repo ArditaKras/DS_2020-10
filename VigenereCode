@@ -3,7 +3,7 @@ public class VigenereCipher {
         String key = "ALBINA";
         String originalmessage = "KILL THE PERSON A";
         String encryption = encrypt(originalmessage, key);
-        System.out.println("Key is:"+key);
+        System.out.println("Key word is:"+key);
         System.out.println("The original message is:"+originalmessage);
         System.out.println(encryption);
         System.out.println(decryption(encryption, key));
