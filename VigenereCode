@@ -1,1 +1,200 @@
-
+import java.util.Scanner;
+public class EncryptionDectryption
+{
+public static void main(String[] args)
+{
+	Scanner input=new Scanner(System.in);
+	
+	String word=" ",pText=" ",newWord=" ";
+	
+	System.out.printf("Enter the string you would like to encrypt:");
+	pText=input.nextLine();
+	
+	word=cipher(pText);
+	newWord=deCipher(word);
+	System.out.printf("Plain Text:%s%n" +  "Cipher Text:%s%n"  +  "Plain Text:%s%n%n",pText,word,newWord);
+	
+	System.out.printf("Enter the string you would like to decrypt:");
+	word=input.nextLine();
+	
+	 pText=deCipher(word);
+	System.out.printf("%n%nCipher Text: %s%n" + "PlainText:%s%n",word,pText);
+}
+public static String cipher(String pText) 
+{
+	String word=" ";
+	for(int i=0;i<pText.length();i++) {
+		char code=Character.toLowerCase(pText.charAt(i));
+		switch(code) {
+		case'a':
+			word+="#";
+			break;
+		case'b':
+			word+="]";
+			break;
+		case'c':
+			word+="=";
+			break;
+		case'd':
+			word+="[";
+			break;
+		case'e':
+			word+="!";
+			break;
+		case'f':
+			word+=";";
+			break;
+		case'g':
+			word+="(";
+			break;
+		case'h':
+			word+=")";
+			break;
+		case'i':
+			word+="%";
+			break;
+		case'j':
+			word+="-";
+			break;
+		case'k':
+			word+=".";
+			break;
+		case'l':
+			word+=",";
+			break;
+		case'm':
+			word+=">";
+			break;
+		case'n':
+			word+="^";
+			break;
+		case'o':
+			word+="$";
+			break;
+		case'p':
+			word+="|";
+			break;
+		case'q':
+			word+="<";
+			break;
+		case'r':
+			word+="*";
+			break;
+		case's':
+			word+="&";
+			break;
+		case't':
+			word+="@";
+			break;
+		case'u':
+			word+="`";
+			break;
+		case'v':
+			word+="¬ ";
+			break;
+		case'x':
+			word+="?";
+			break;
+		case'y':
+			word+="+";
+			break;
+		case'z':
+			word+="{";
+			break;
+			default:
+				word+=pText.charAt(i);
+				break;
+		}
+	}
+	return word;
+}
+public static String deCipher(String deText) {
+	String newWord=" ";
+	for(int i=0;i<deText.length(); i++)
+	{
+		char code=Character.toLowerCase(deText.charAt(i));
+		switch(code) {
+		case'#':
+			newWord+="a";
+			break;
+		case']':
+			newWord+="b";
+			break;
+		case'=':
+			newWord+="c";
+			break;
+		case'[':
+			newWord+="d";
+			break;
+		case'!':
+			newWord+="e";
+			break;
+		case';':
+			newWord+="f";
+			break;
+		case'(':
+			newWord+="g";
+			break;
+		case')':
+			newWord+="h";
+			break;
+		case'%':
+			newWord+="i";
+			break;
+		case'-':
+			newWord+="j";
+			break;
+		case'.':
+			newWord+="k";
+			break;
+		case',':
+			newWord+="l";
+			break;
+		case'>':
+		newWord+="m";
+			break;
+		case'^':
+			newWord+="n";
+			break;
+		case'$':
+			newWord+="o";
+			break;
+		case'|':
+			newWord+="p";
+			break;
+		case'<':
+			newWord+="q";
+			break;
+		case'*':
+			newWord+="r";
+			break;
+		case'&':
+			newWord+="s";
+			break;
+		case'@':
+			newWord+="t";
+			break;
+		case'`':
+			newWord+="u";
+			break;
+		case'¬':
+			newWord+="v ";
+			break;
+		case'?':
+			newWord+="x";
+			break;
+		case'+':
+			newWord+="y";
+			break;
+		case'{':
+			newWord+="z";
+			break;
+			default:
+				newWord+=deText.charAt(i);
+				break;
+		
+		}	
+	}
+	return newWord;
+}
+}
