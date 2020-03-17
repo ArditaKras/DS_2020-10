@@ -41,24 +41,29 @@ menyve mirëpo edhe përmes shiritit  të veglave.
 
 Per te ekzekutuar programin shfrytezohen Run and Debug toolbar komandat.
 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
  
 
 
 
 
+3.Vigenere Cipher Code
 
-
-
-
-
-
-
-
-
- 
- 
- 
-
-
-
-
+Vigenere Cipher është një metodë e enkriptimit dhe dekriptimit të tekstit alfabetik.
