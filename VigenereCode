@@ -13,9 +13,9 @@ public class VigenereCipher {
         String result = "Encryption text is : ";
         text = text.toUpperCase();
         for (int i = 0, j = 0; i < text.length(); i++) {
-            char c = text.charAt(i);
-            if (c < 'A' || c > 'Z') continue;
-            result += (char)((c + key.charAt(j) - 2 * 'A') % 26 + 'A');
+            char a = text.charAt(i);
+            if (a < 'A' || a > 'Z') continue;
+            result += (char)((a + key.charAt(j) - 2 * 'A') % 26 + 'A');
             j = ++j % key.length();
         }
         return result;
@@ -25,9 +25,9 @@ public class VigenereCipher {
         String result = "Dectryption text is : ";
         text = text.toUpperCase();
         for (int i = 0, j = 0; i < text.length(); i++) {
-            char c = text.charAt(i);
-            if (c < 'A' || c > 'Z') continue;
-            result += (char)((c - key.charAt(j) + 26) % 26 + 'A');
+            char a = text.charAt(i);
+            if (a < 'A' || a > 'Z') continue;
+            result += (char)((a - key.charAt(j) + 26) % 26 + 'A');
             j = ++j % key.length();
         }
         return result;
