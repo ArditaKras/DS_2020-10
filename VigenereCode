@@ -7,18 +7,21 @@ public static void main(String[] args)
 	
 	String word=" ",pText=" ",newWord=" ";
 	
-	System.out.printf("Enter the string you would like to encrypt:");
+	System.out.printf("Enter the string you would like to encrypt: ");
 	pText=input.nextLine();
 	
 	word=cipher(pText);
 	newWord=deCipher(word);
-	System.out.printf("Plain Text:%s%n" +  "Cipher Text:%s%n"  +  "Plain Text:%s%n%n",pText,word,newWord);
+	System.out.printf("Plain Text:%s%n"
+	                   +  "Cipher Text:%s%n" 
+			   +  "Plain Text:%s%n%n",pText,word,newWord);
 	
-	System.out.printf("Enter the string you would like to decrypt:");
+	System.out.printf("Enter the string you would like to decrypt: ");
 	word=input.nextLine();
 	
 	 pText=deCipher(word);
-	System.out.printf("%n%nCipher Text: %s%n" + "PlainText:%s%n",word,pText);
+	System.out.printf("%n%nCipher Text: %s%n" 
+	                  + "PlainText:%s%n",word,pText);
 }
 public static String cipher(String pText) 
 {
