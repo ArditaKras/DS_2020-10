@@ -1,133 +1,141 @@
-package ushtrime4;
+package application;
 
-import java.util.Scanner;
+
 
 public class TapCode {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner input = new Scanner(System.in);
-		String emriPlote ="";
-		System.out.println("\n$ ds tap-code encode ");
-		
-		emriPlote=input.nextLine();
-		
-		
-		
-		input.close();
-		
-		
-		  String[] argspliter = emriPlote.split(" ", 4);
+	
+	
+		public static String tapCodeEnkodimi(String emriPlote)
+		{
+			
+			System.out.println("\n$ ds tap-code encode ");
+			
+			 String[] argspliter = emriPlote.split(" ", 4);
 
-			//per error  
-			if(!argspliter[0].equals("ds") || argspliter.length != 4) {
-				throw new IllegalArgumentException("Syntax invalid! Mungojne argumentet!");
-			}else if(!argspliter[1].equals("tap-code")){
-				throw new IllegalArgumentException("Mungon tipi enkodimit!");
+				//per error  
+				if(!argspliter[0].equals("ds") || argspliter.length != 4) {
+					throw new IllegalArgumentException("Syntax invalid! Mungojne argumentet!");
+				}else if(!argspliter[1].equals("tap-code")){
+					throw new IllegalArgumentException("Mungon tipi enkodimit!");
+				}
+				
+
+				String emri = argspliter[3];
+				emri=emri.toLowerCase();
+				
+				System.out.println("\nTap Code : ");
+				char array[]=new char[20];
+				emri.getChars(0,emri.length(),array,0);
+				
+
+
+			for(int i=0;i<emri.length();i++)
+			{
+			switch (array[i]) {
+			case 'a': 
+				System.out.printf(". .   ");
+				break;
+			case 'b': 
+				System.out.printf(". ..   ");
+				break;
+			case 'c': 
+				System.out.printf(". ...   ");
+				break;
+			case 'd': 
+				System.out.printf(". ....   ");
+				break;
+			case 'e': 
+				System.out.printf(". .....   ");
+				break;
+			case 'f': 
+				System.out.printf(".. .   ");
+				break;
+			case 'g': 
+				System.out.printf(".. ..   ");
+				break;
+			case 'h': 
+				System.out.printf(".. ...  ");
+				break;
+			case 'i': 
+				System.out.printf(".. ....   ");
+				break;
+			case 'j': 
+				System.out.printf(".. .....   ");
+				break;
+			case 'k': 
+				System.out.printf(". ...   ");
+				break;
+			case 'l': 
+				System.out.printf("... .   ");
+				break;
+			case 'm': 
+				System.out.printf("... ..   ");
+				break;
+			case 'n': 
+				System.out.printf("... ...   ");
+				break;
+			case 'o': 
+				System.out.printf("... ....   ");
+				break;
+			case 'p': 
+				System.out.printf("... .....   ");
+				break;
+			case 'q': 
+				System.out.printf(".... .   ");
+				break;
+			case 'r': 
+				System.out.printf(".... ..   ");
+				break;
+			case 's': 
+				System.out.printf(".... ...   ");
+				break;
+			case 't': 
+				System.out.printf(".... ....   ");
+				break;
+			case 'u': 
+				System.out.printf(".... .....   ");
+				break;
+			case 'v': 
+				System.out.printf("..... .   ");
+				break;
+			case 'w': 
+				System.out.printf("..... ..   ");
+				break;
+			case 'x': 
+				System.out.printf("..... ...   ");
+				break;
+			case 'y': 
+				System.out.printf("..... ....   ");
+				break;
+			case 'z': 
+				System.out.printf("..... .....   ");
+				break;
+			case ' ': 
+				System.out.printf(" / ");
+				break;
+				
+			
+			default:
+				throw new IllegalArgumentException("Unexpected value: " + emri);
 			}
 			
-
-			String emri = argspliter[3];
-			emri=emri.toLowerCase();
-			
-			System.out.println("\nTap Code : ");
-			char array[]=new char[20];
-			emri.getChars(0,emri.length(),array,0);
-			
-
-
-		for(int i=0;i<emri.length();i++)
-		{
-		switch (array[i]) {
-		case 'a': 
-			System.out.printf(". .   ");
-			break;
-		case 'b': 
-			System.out.printf(". ..   ");
-			break;
-		case 'c': 
-			System.out.printf(". ...   ");
-			break;
-		case 'd': 
-			System.out.printf(". ....   ");
-			break;
-		case 'e': 
-			System.out.printf(". .....   ");
-			break;
-		case 'f': 
-			System.out.printf(".. .   ");
-			break;
-		case 'g': 
-			System.out.printf(".. ..   ");
-			break;
-		case 'h': 
-			System.out.printf(".. ...  ");
-			break;
-		case 'i': 
-			System.out.printf(".. ....   ");
-			break;
-		case 'j': 
-			System.out.printf(".. .....   ");
-			break;
-		case 'k': 
-			System.out.printf(". ...   ");
-			break;
-		case 'l': 
-			System.out.printf("... .   ");
-			break;
-		case 'm': 
-			System.out.printf("... ..   ");
-			break;
-		case 'n': 
-			System.out.printf("... ...   ");
-			break;
-		case 'o': 
-			System.out.printf("... ....   ");
-			break;
-		case 'p': 
-			System.out.printf("... .....   ");
-			break;
-		case 'q': 
-			System.out.printf(".... .   ");
-			break;
-		case 'r': 
-			System.out.printf(".... ..   ");
-			break;
-		case 's': 
-			System.out.printf(".... ...   ");
-			break;
-		case 't': 
-			System.out.printf(".... ....   ");
-			break;
-		case 'u': 
-			System.out.printf(".... .....   ");
-			break;
-		case 'v': 
-			System.out.printf("..... .   ");
-			break;
-		case 'w': 
-			System.out.printf("..... ..   ");
-			break;
-		case 'x': 
-			System.out.printf("..... ...   ");
-			break;
-		case 'y': 
-			System.out.printf("..... ....   ");
-			break;
-		case 'z': 
-			System.out.printf("..... .....   ");
-			break;
-		case ' ': 
-			System.out.printf(" / ");
-			break;
-			
-		
-		default:
-			throw new IllegalArgumentException("Unexpected value: " + emri);
-		}
+			}
+			return "end";
 		
 		}
-	
-	}
+		 
+		public static void main(String[] args) {
+		
+		
+		}
+			
+		}
+		
+		
+		
+		
+		
+		 
 
-}
+
