@@ -1,0 +1,19 @@
+package application;
+import application.TapCodeDecoder;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method 
+		
+		System.out.println(TapCode.tapCodeEnkodimi("ds tap-code encode Siguria"));
+		System.out.println();
+		
+		System.out.println("Tapcode Decode :\n");
+		System.out.println(TapCodeDecoder.tapCodeDekodimi(". . .... .. . .... .. .... .... .... . ."));
+		
+		
+		
+	}
+}
