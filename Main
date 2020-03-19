@@ -1,6 +1,4 @@
 package application;
-import application.TapCodeDecoder;
-
 
 public class Main {
 
@@ -12,7 +10,9 @@ public class Main {
 		
 		System.out.println("Tapcode Decode :\n");
 		System.out.println(TapCodeDecoder.tapCodeDekodimi(". . .... .. . .... .. .... .... .... . ."));
-		
+		System.out.println();
+	
+		System.out.println(MorseCode.morseCodeEnkodimi("ds morse-code encode Siguria"));
 		
 		
 	}
