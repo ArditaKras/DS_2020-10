@@ -8,18 +8,26 @@ public class Main {
 		// TODO Auto-generated method 
 		Scanner input = new Scanner(System.in);
 		System.out.println("\n$ ds tap-code encode ");
-		String emri=input.nextLine();
-		
-		input.close();
-		System.out.println(TapCode.tapCodeEnkodimi(emri));
+		String encode=input.nextLine();
+	
+		System.out.println(TapCode.tapCodeEnkodimi(encode));
 		System.out.println();
 		
 		System.out.println("Tapcode Decode :\n");
-		System.out.println(TapCodeDecoder.tapCodeDekodimi(". . .... .. . .... .. .... .... .... . ."));
+		String decode = input.nextLine();
+		
+		
+		System.out.println(TapCodeDecoder.tapCodeDekodimi(decode));
 		System.out.println();
-	
-		System.out.println(MorseCode.morseCodeEnkodimi("ds morse-code encode Siguria"));
+		
+
+		System.out.println("ds morse-code encode");
+		String encodeM = input.nextLine();
+		System.out.println(MorseCode.morseCodeEnkodimi(encodeM));
+		
+
 		
 		
+		input.close();
 	}
 }
