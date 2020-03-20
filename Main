@@ -1,11 +1,17 @@
 package application;
 
+import java.util.Scanner;
+
 public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method 
+		Scanner input = new Scanner(System.in);
+		System.out.println("\n$ ds tap-code encode ");
+		String emri=input.nextLine();
 		
-		System.out.println(TapCode.tapCodeEnkodimi("ds tap-code encode Siguria"));
+		input.close();
+		System.out.println(TapCode.tapCodeEnkodimi(emri));
 		System.out.println();
 		
 		System.out.println("Tapcode Decode :\n");
