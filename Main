@@ -25,6 +25,22 @@ public class Main {
 		String encodeM = input.nextLine();
 		System.out.println(MorseCode.morseCodeEnkodimi(encodeM));
 		
+		System.out.println();
+		
+		System.out.println("Jep qelsin : ");
+		String key = input.nextLine();
+		System.out.println("Jep mesazhin origjinal : ");
+		String originalmessage = input.nextLine();
+		 
+	        String encryption =VigenereCipher.encrypt(originalmessage, key);
+	        System.out.println("Key word is:"+key);
+	        System.out.println("The original message is:"+originalmessage);
+	        System.out.println(encryption);
+	        System.out.println(VigenereCipher.decryption(encryption, key));
+		
+
+		
+		
 
 		
 		
