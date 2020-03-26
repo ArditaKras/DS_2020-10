@@ -1,49 +1,11 @@
-package application;
-
-import java.util.Scanner;
-
-public class Main {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method 
-		Scanner input = new Scanner(System.in);
-		System.out.println("\n$ ds tap-code encode ");
-		String encode=input.nextLine();
-	
-		System.out.println(TapCode.tapCodeEnkodimi(encode));
-		System.out.println();
-		
-		System.out.println("Tapcode Decode :\n");
-		String decode = input.nextLine();
-		
-		
-		System.out.println(TapCodeDecoder.tapCodeDekodimi(decode));
-		System.out.println();
-		
-
-		System.out.println("ds morse-code encode");
-		String encodeM = input.nextLine();
-		System.out.println(MorseCode.morseCodeEnkodimi(encodeM));
-		
-		System.out.println();
-		
-		System.out.println("Jep qelsin : ");
-		String key = input.nextLine();
-		System.out.println("Jep mesazhin origjinal : ");
-		String originalmessage = input.nextLine();
-		 
-	        String encryption =VigenereCipher.encrypt(originalmessage, key);
-	        System.out.println("Key word is:"+key);
-	        System.out.println("The original message is:"+originalmessage);
-	        System.out.println(encryption);
-	        System.out.println(VigenereCipher.decryption(encryption, key));
-		
-
-		
-		
-
-		
-		
-		input.close();
-	}
+public class Main{
+		public static void main(String[] args){
+		Morse M = new Morse();
+		if("morse-code".equals(args[0])){
+			if("encode".equals(args[1]))
+				M.encode(args[2]);
+		else if("decode".equals(args[1]))
+			M.decode(args[2]);
+			}
+		}
 }
