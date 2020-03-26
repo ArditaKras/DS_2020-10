@@ -67,3 +67,7 @@ Per te ekzekutuar programin shfrytezohen Run and Debug toolbar komandat.
 3.Vigenere Cipher Code
 
 Vigenere Cipher është një metodë e enkriptimit dhe dekriptimit të tekstit alfabetik.Enriptimi dhe dekriptimit i tekstit origjinal bëhet duke përdorur tabelën Vigenère.
+
+REFERENCAT:
+
+➣ https://pcworld.al/shkenca-e-kriptografise-te-gjitha-ne-nje-vend/
