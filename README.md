@@ -40,16 +40,19 @@ Opsionet për krijimin e projektit, ekzekutimin dhe debug-imin janë  të qasshm
 menyve mirëpo edhe përmes shiritit  të veglave.
 
 
-✸ Funksioni Morse:
-
-→ 1. java Main morse-code encode | decode <text>
-→ 2. java Main morse-code beep <text>
 
 ✸ Funksioni Tap:
 
 → 1. java Main tap-code encode | decode <text>
 
 ![Tap](https://user-images.githubusercontent.com/58491146/77836141-d0f28380-7153-11ea-9bbf-6bde6fc897e2.png)
+
+✸ Funksioni Morse:
+
+→ 1. java Main morse-code encode | decode <text>
+→ 2. java Main morse-code beep <text>
+
+![Morse (2)](https://user-images.githubusercontent.com/58491146/77836506-f765ee00-7156-11ea-8c9f-660235c7be43.png)
 
 ✸ Funksioni Vigenere:
 
