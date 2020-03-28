@@ -39,7 +39,24 @@ https://www.youtube.com/watch?v=lXVE34i-QMc(Tutorial - How To: Create a Simple J
 Opsionet për krijimin e projektit, ekzekutimin dhe debug-imin janë  të qasshme përmes 
 menyve mirëpo edhe përmes shiritit  të veglave.
 
-Per te ekzekutuar programin shfrytezohen Run and Debug toolbar komandat.
+
+✸ Funksioni Morse:
+
+→ 1. java Main morse-code encode | decode <text>
+→ 2. java Main morse-code beep <text>
+
+✸ Funksioni Tap:
+
+→ 1. java Main tap-code encode | decode <text>
+
+![Tap](https://user-images.githubusercontent.com/58491146/77836141-d0f28380-7153-11ea-9bbf-6bde6fc897e2.png)
+
+✸ Funksioni Vigenere:
+
+→ 1. java Main vigenere-cipher encrypt | decrypt <text>
+
+![Vigenere](https://user-images.githubusercontent.com/58491146/77836194-537b4300-7154-11ea-885b-114e85896d3a.png)
+
 
 
 
