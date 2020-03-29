@@ -55,6 +55,7 @@ per te kompajluar (jep argumentet sipas sintakses ne vazhdim)
 ✸ Funksioni Morse:
 
 → 1. java Main morse-code encode | decode <text>
+  
 → 2. java Main morse-code beep <text>
 
 ![Morse (2)](https://user-images.githubusercontent.com/58491146/77836506-f765ee00-7156-11ea-8c9f-660235c7be43.png)
