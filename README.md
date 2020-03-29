@@ -39,7 +39,12 @@ https://www.youtube.com/watch?v=lXVE34i-QMc(Tutorial - How To: Create a Simple J
 Opsionet për krijimin e projektit, ekzekutimin dhe debug-imin janë  të qasshme përmes 
 menyve mirëpo edhe përmes shiritit  të veglave.
 
+Ne (Command Line) te cilen mund ta hapni permes menyse se Start (Search--> cmd) Shkruani Syntax:
+Per te ekzekutuar:
 
+✸javac Main.java
+
+per te kompajluar (jep argumentet sipas sintakses ne vazhdim)
 
 ✸ Funksioni Tap:
 
@@ -63,31 +68,8 @@ menyve mirëpo edhe përmes shiritit  të veglave.
 
 
 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
- 
- 
-
-
-
-
-3.Vigenere Cipher Code
-
-Vigenere Cipher është një metodë e enkriptimit dhe dekriptimit të tekstit alfabetik.Enriptimi dhe dekriptimit i tekstit origjinal bëhet duke përdorur tabelën Vigenère.
 
 REFERENCAT:
 
 ➣ https://pcworld.al/shkenca-e-kriptografise-te-gjitha-ne-nje-vend/
+➣ https://gist.github.com/Xyene/6478305 
