@@ -72,4 +72,5 @@ per te kompajluar (jep argumentet sipas sintakses ne vazhdim)
 REFERENCAT:
 
 ➣ https://pcworld.al/shkenca-e-kriptografise-te-gjitha-ne-nje-vend/
+
 ➣ https://gist.github.com/Xyene/6478305 
