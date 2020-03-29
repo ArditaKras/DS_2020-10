@@ -39,7 +39,7 @@ https://www.youtube.com/watch?v=lXVE34i-QMc(Tutorial - How To: Create a Simple J
 Opsionet për krijimin e projektit, ekzekutimin dhe debug-imin janë  të qasshme përmes 
 menyve mirëpo edhe përmes shiritit  të veglave.
 
-Ne (Command Line) te cilen mund ta hapni permes menyse se Start (Search--> cmd) Shkruani Syntax:
+Ne (Command Prompt) te cilen mund ta hapni permes menyse se Start (Search--> cmd) Shkruani Syntax:
 Per te ekzekutuar:
 
 ✸javac Main.java
