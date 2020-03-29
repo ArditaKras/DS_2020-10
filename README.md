@@ -73,4 +73,6 @@ REFERENCAT:
 
 ➣ https://pcworld.al/shkenca-e-kriptografise-te-gjitha-ne-nje-vend/
 
+Morse Code Audio bazuar ne:
+
 ➣ https://gist.github.com/Xyene/6478305 
