@@ -10,7 +10,7 @@ public class Main{
 		public static void main(String[] args)throws  ArrayIndexOutOfBoundsException, IOException, LineUnavailableException, InterruptedException{
 		
 
-			GenerateKeys generate;
+			CreateUser generate;
 			
 		
 			Morse M = new Morse();
@@ -62,7 +62,7 @@ public class Main{
 			if("create-user".equals(args[0]))
 			{
 				try {
-					generate = new GenerateKeys(1024);
+					generate = new CreateUser(1024);
 					generate.createKeys();
 					String emri = args[1];
 					String emri1 = "keys/" + emri + ".xml";
@@ -82,6 +82,9 @@ public class Main{
 				}
 			}
 			
+		
+		
 	}
+
 
 }
