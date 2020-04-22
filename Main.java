@@ -1,6 +1,6 @@
-import java.util.*;
-import java.io.*;
+
 import javax.sound.sampled.*;
+import java.io.File;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
@@ -81,8 +81,29 @@ public class Main{
 					System.err.println(e.getMessage());
 				}
 			}
-			
-		
+			if("delete-user".equals(args[0]))
+			{
+				String emri = args[1];
+				String emri1 = "keys/" + emri + ".xml";
+				String emri2 = "keys/" + emri + ".pub.xml";
+		        File file1 = new File(emri1); 
+		        File file2 = new File(emri2); 
+		          
+		        if(file1.delete()) 
+		        { 
+		            System.out.println("Eshte larguar celesi privat " + emri1); 
+		        } 
+		        
+		        if(file2.delete()) 
+		        { 
+		            System.out.println("Eshte larguar celesi publik " + emri2); 
+		        } 
+		        else
+		        { 
+		            System.out.println("Gabim: Celesi " + emri + " nuk egziston."); 
+		        } 
+		        
+			}
 		
 	}
 
