@@ -2,6 +2,9 @@
 import javax.sound.sampled.*;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
 
@@ -62,15 +65,25 @@ public class Main{
 			if("create-user".equals(args[0]))
 			{
 				try {
-					generate = new CreateUser(1024);
-					generate.createKeys();
+					
 					String emri = args[1];
 					String emri1 = "keys/" + emri + ".xml";
 					String emri2 = "keys/" + emri + ".pub.xml";
-					generate.writeToFile(emri1 , generate.getPublicKey().getEncoded());
-					generate.writeToFile(emri2 , generate.getPrivateKey().getEncoded());
-					System.out.println("Eshte krijuar celesi privat " + emri1);
-					System.out.println("Eshte krijuar celesi publik " + emri2);
+					
+					Path path = Paths.get(emri1);
+					
+					if (Files.exists(path)) {
+					  System.out.println("Gabim: Celesi '" + emri + "' egziston paraprakisht. ");
+					}
+					if (Files.notExists(path)) {
+						generate = new CreateUser(1024);
+						generate.createKeys();
+						generate.writeToFile(emri1 , generate.getPublicKey().getEncoded());
+						generate.writeToFile(emri2 , generate.getPrivateKey().getEncoded());
+						System.out.println("Eshte krijuar celesi privat '" + emri1 + "'");
+						System.out.println("Eshte krijuar celesi publik '" + emri2 + "'");
+					}
+					
 					}
 				catch (NoSuchAlgorithmException | NoSuchProviderException e) 
 				{
@@ -91,16 +104,16 @@ public class Main{
 		          
 		        if(file1.delete()) 
 		        { 
-		            System.out.println("Eshte larguar celesi privat " + emri1); 
+		            System.out.println("Eshte larguar celesi privat '" + emri1 + "'"); 
 		        } 
 		        
 		        if(file2.delete()) 
 		        { 
-		            System.out.println("Eshte larguar celesi publik " + emri2); 
+		            System.out.println("Eshte larguar celesi publik '" + emri2 + "'"); 
 		        } 
 		        else
 		        { 
-		            System.out.println("Gabim: Celesi " + emri + " nuk egziston."); 
+		            System.out.println("Gabim: Celesi '" + emri + "' nuk egziston."); 
 		        } 
 		        
 			}
