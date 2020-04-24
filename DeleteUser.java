@@ -24,7 +24,7 @@ public class DeleteUser{
         { 
             System.out.println("Gabim: Celesi '" + emri + "' nuk egziston."); 
         } 
-     
+    
     }
     
 }
