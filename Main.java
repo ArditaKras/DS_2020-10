@@ -1,5 +1,7 @@
 
 import javax.sound.sampled.*;
+
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -21,14 +23,14 @@ public class Main{
 			
 			
 	                //how to use arguments in console
-			if(args.length > 4 || args.length < 2 || args.length == 0){
+			if(args.length > 4 || args.length < 1 || args.length == 0){
 				System.out.println("\n\t\tProgrami pranon deri ne 4 argumente jo me shume!\t\t\n");
 				System.out.println("~Perdor morse-code encode | decode <text>\n" + "~Perdor tap-code encode | decode <text>\n" + "~Perdor vigenere-code encrypt | decrypt <text>\n");
 				System.exit(0);
 			}
 			
 			
-				
+			
 			if("morse-code".equals(args[0])){
 				if("encode".equals(args[1]))
 					System.out.println(M.encode(args[2]));
@@ -99,7 +101,22 @@ public class Main{
 				String emri = args[1];
 				DeleteUser.find(emri);
 			}
-		
+			if("write-message".equals(args[0]))
+			{
+				String name = args[1];
+				
+				if(args.length == args[1].length() + args[0].length()-14)
+				{
+					System.out.println("Nothing");
+				}
+				else {
+					String message = args[2];
+					String emri2 = "keys/" + name + ".pub.xml";
+					WriteMessage.Write(emri2,message);
+				}
+				
+			}
+			
 	}
 
 
