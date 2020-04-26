@@ -109,7 +109,7 @@ public class Main{
 			}
 			if("write-message".equals(args[0]))
 			{
-				String emri2 = args[1];
+				String name = args[1];
 				
 				if(args.length == args[1].length() + args[0].length()-14)
 				{
@@ -117,7 +117,7 @@ public class Main{
 				}
 				else {
 					String message = args[2];
-					String name = "keys/" + emri2 + ".pub.xml";
+					
 					WriteMessage.Write(name,message);
 				}
 				
