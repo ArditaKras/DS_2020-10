@@ -1,4 +1,5 @@
 
+import javax.crypto.Cipher;
 import javax.sound.sampled.*;
 
 
@@ -7,12 +8,17 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.security.Key;
+import java.security.KeyPair;
+import java.security.KeyPairGenerator;
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
+import java.security.SecureRandom;
+import java.security.Security;
 
 
 public class Main{
-		public static void main(String[] args)throws  ArrayIndexOutOfBoundsException, IOException, LineUnavailableException, InterruptedException{
+		public static void main(String[] args)throws ArrayIndexOutOfBoundsException, IOException, LineUnavailableException, InterruptedException{
 		
 
 			CreateUser generate;
@@ -103,7 +109,7 @@ public class Main{
 			}
 			if("write-message".equals(args[0]))
 			{
-				String name = args[1];
+				String emri2 = args[1];
 				
 				if(args.length == args[1].length() + args[0].length()-14)
 				{
@@ -111,12 +117,13 @@ public class Main{
 				}
 				else {
 					String message = args[2];
-					String emri2 = "keys/" + name + ".pub.xml";
-					WriteMessage.Write(emri2,message);
+					String name = "keys/" + emri2 + ".pub.xml";
+					WriteMessage.Write(name,message);
 				}
 				
 			}
 			
+		
 	}
 
 
