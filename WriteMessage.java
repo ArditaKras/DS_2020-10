@@ -20,14 +20,12 @@ public class WriteMessage {
 		
 		public static void Write(String name, String message) 
 		{
-			
-			String fileContent = message;
-		     
-		    Path path = Paths.get(name);
+			String emri2 = "keys/" + name + ".pub.xml";
+		    Path path = Paths.get(emri2);
 		    
 		    try {
-		    	String e = create(name,message);
-				Files.write(path, e.getBytes());
+		    	String tosend = create(name,message);
+				Files.write(path, tosend.getBytes());
 				
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
@@ -40,7 +38,8 @@ public class WriteMessage {
 			try {
 				// Encode   base64(utf8(<name>)) 
 				String asB64 = Base64.getEncoder().encodeToString(name.getBytes("utf-8"));
-				System.out.printf(asB64+"."); // Output will be: c29tZSBzdHJpbmc=
+				String first = asB64+".";
+				System.out.printf(first); // Output will be: c29tZSBzdHJpbmc=
 				
 				// encode base64(<iv>) 
 				SecureRandom sr = new SecureRandom(); //create new secure random
@@ -48,6 +47,7 @@ public class WriteMessage {
 				sr.nextBytes(iv); //create random bytes to be used for the IV (?) Not too sure.
 				IvParameterSpec IV = new IvParameterSpec(iv); //creating the IV 
 				String asB65 = Base64.getEncoder().encodeToString(iv);
+				String second = asB65+".";
 				System.out.printf(asB65+".");
 			
 				// encode base64(des(<message>))
@@ -75,9 +75,9 @@ public class WriteMessage {
 				if (base64) {
 				    encryptedMessageString = Base64.getEncoder().encodeToString(encryptedMessageString.getBytes("utf-8"));
 				}
-
+				String fourth = encryptedMessageString;
 				System.out.printf(encryptedMessageString);	
-				return asB64+asB65+encryptedMessageString;
+				return first+second+fourth;
 			
 			} catch (Exception e) {
 				// TODO: handle exception
