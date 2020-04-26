@@ -26,6 +26,7 @@ public class WriteMessage {
 		    try {
 		    	String tosend = create(name,message);
 				Files.write(path, tosend.getBytes());
+				System.out.println(tosend);
 				
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
@@ -33,13 +34,29 @@ public class WriteMessage {
 			}
 			
 		}
+		public static void Write1(String name, String message,String file) 
+		{
+			String emri2 = "keys/" + file;
+		    Path path = Paths.get(emri2);
+		    
+		    try {
+		    	String tosend = create(name,message);
+				Files.write(path, tosend.getBytes());
+				System.out.println("Celesi u ruajt ne  fajllin: "+file);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+		
 		public static String create(String name, String message) throws UnsupportedEncodingException {
 			
 			try {
 				// Encode   base64(utf8(<name>)) 
 				String asB64 = Base64.getEncoder().encodeToString(name.getBytes("utf-8"));
 				String first = asB64+".";
-				System.out.printf(first); // Output will be: c29tZSBzdHJpbmc=
+				 // Output will be: c29tZSBzdHJpbmc=
 				
 				// encode base64(<iv>) 
 				SecureRandom sr = new SecureRandom(); //create new secure random
@@ -48,7 +65,7 @@ public class WriteMessage {
 				IvParameterSpec IV = new IvParameterSpec(iv); //creating the IV 
 				String asB65 = Base64.getEncoder().encodeToString(iv);
 				String second = asB65+".";
-				System.out.printf(asB65+".");
+				
 			
 				// encode base64(des(<message>))
 
@@ -76,7 +93,7 @@ public class WriteMessage {
 				    encryptedMessageString = Base64.getEncoder().encodeToString(encryptedMessageString.getBytes("utf-8"));
 				}
 				String fourth = encryptedMessageString;
-				System.out.printf(encryptedMessageString);	
+					
 				return first+second+fourth;
 			
 			} catch (Exception e) {
