@@ -29,7 +29,7 @@ public class Main{
 			
 			
 	                //how to use arguments in console
-			if(args.length > 4 || args.length < 1 || args.length == 0){
+			if(args.length > 4 || args.length < 2 || args.length == 0){
 				System.out.println("\n\t\tProgrami pranon deri ne 4 argumente jo me shume!\t\t\n");
 				System.out.println("~Perdor morse-code encode | decode <text>\n" + "~Perdor tap-code encode | decode <text>\n" + "~Perdor vigenere-code encrypt | decrypt <text>\n");
 				System.exit(0);
@@ -110,19 +110,42 @@ public class Main{
 			if("write-message".equals(args[0]))
 			{
 				String name = args[1];
-				
-				if(args.length == args[1].length() + args[0].length()-14)
-				{
-					System.out.println("Nothing");
-				}
-				else {
-					String message = args[2];
+				String em = "keys/" + name + ".pub.xml";
+				Path path = Paths.get(em);
+				 
 					
-					WriteMessage.Write(name,message);
+				if(args.length < 4)
+				{
+					if (Files.exists(path))
+					{
+						
+						String message = args[2];
+						
+						WriteMessage.Write(name,message);
+						}
+					else if (Files.notExists(path))
+					{
+						System.out.println("Gabim: Celesi '" + name + "' nuk egziston paraprakisht. ");
+					}
 				}
+				else if(args.length > 3)
+				{
+					if (Files.exists(path))
+					{
+						String message = args[2];
+						String file = args[3];
+						WriteMessage.Write1(name,message,file);
+					}
+					else if (Files.notExists(path))
+					{
+						System.out.println("Gabim: Celesi '" + name + "' nuk egziston paraprakisht. ");
+					}
+				}	
+			
 				
 			}
-			
+		
+		
 		
 	}
 
