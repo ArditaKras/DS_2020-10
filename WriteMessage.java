@@ -5,6 +5,8 @@ import java.io.UnsupportedEncodingException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.security.KeyPair;
+import java.security.KeyPairGenerator;
 import java.security.SecureRandom;
 import java.util.Base64;
 import java.util.Random;
@@ -17,7 +19,7 @@ import javax.crypto.spec.IvParameterSpec;
 
 
 public class WriteMessage {
-		
+	private static Base64.Encoder encoder = Base64.getEncoder();
 		public static void Write(String name, String message) 
 		{
 			String emri2 = "keys/" + name + ".pub.xml";
@@ -42,7 +44,7 @@ public class WriteMessage {
 		    try {
 		    	String tosend = create(name,message);
 				Files.write(path, tosend.getBytes());
-				System.out.println("Celesi u ruajt ne  fajllin: "+file);
+				System.out.println("Celesi u ruajt ne  fajllin '"+file + "'.");
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -66,9 +68,17 @@ public class WriteMessage {
 				String asB65 = Base64.getEncoder().encodeToString(iv);
 				String second = asB65+".";
 				
-			
+				// encode base64(rsa(<key>))
+				final int keySize = 512;
+				KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance("RSA");
+			    keyPairGenerator.initialize(keySize);
+			    KeyPair keyPair = keyPairGenerator.genKeyPair();
+			    String k = encoder.encodeToString(keyPair.getPublic().getEncoded());
+			    String s = k.substring(0,20);
+			    String third= s + ".";
+			       
+				
 				// encode base64(des(<message>))
-
 				boolean base64 = true;
 				byte[] array = new byte[8]; // length is bounded by 7
 			    new Random().nextBytes(array);
@@ -94,7 +104,7 @@ public class WriteMessage {
 				}
 				String fourth = encryptedMessageString;
 					
-				return first+second+fourth;
+				return first+second+third+"\n"+fourth;
 			
 			} catch (Exception e) {
 				// TODO: handle exception
