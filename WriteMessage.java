@@ -58,13 +58,13 @@ public class WriteMessage {
 				// Encode   base64(utf8(<name>)) 
 				String asB64 = Base64.getEncoder().encodeToString(name.getBytes("utf-8"));
 				String first = asB64+".";
-				 // Output will be: c29tZSBzdHJpbmc=
+				 
 				
 				// encode base64(<iv>) 
-				SecureRandom sr = new SecureRandom(); //create new secure random
-				byte [] iv = new byte[8]; //create an array of 8 bytes 
-				sr.nextBytes(iv); //create random bytes to be used for the IV (?) Not too sure.
-				IvParameterSpec IV = new IvParameterSpec(iv); //creating the IV 
+				SecureRandom sr = new SecureRandom(); 
+				byte [] iv = new byte[8]; 
+				sr.nextBytes(iv); 
+				IvParameterSpec IV = new IvParameterSpec(iv); 
 				String asB65 = Base64.getEncoder().encodeToString(iv);
 				String second = asB65+".";
 				
@@ -80,7 +80,7 @@ public class WriteMessage {
 				
 				// encode base64(des(<message>))
 				boolean base64 = true;
-				byte[] array = new byte[8]; // length is bounded by 7
+				byte[] array = new byte[8]; 
 			    new Random().nextBytes(array);
 				String key = array.toString();
 				String plainText = message;
