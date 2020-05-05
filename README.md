@@ -91,6 +91,13 @@ per te kompajluar (jep argumentet sipas sintakses ne vazhdim)
  → java Main write-message <name> <message> [file]
   
   ![Write-message](https://user-images.githubusercontent.com/58491146/81122705-c638c480-8f31-11ea-8b0d-3770701d953d.png)
+  
+ ✸ Komanda read-message
+  
+ →  java Main read-message <encrypted-message>
+  
+  ![Read-message](https://user-images.githubusercontent.com/58491146/81123166-b5d51980-8f32-11ea-823e-d595096951e2.png)
+
 
 
 
