@@ -79,7 +79,9 @@ per te kompajluar (jep argumentet sipas sintakses ne vazhdim)
   ![Delete-User](https://user-images.githubusercontent.com/58491146/81103169-f58b0980-8f10-11ea-9b49-d096d9296917.png)
   
   
- ✸ Komanda export-key <public|private> <name> [file]
+ ✸ Komanda export-key 
+  
+  → java Main export-key <public|private> <name> [file]
 
 
 ![Export-Key](https://user-images.githubusercontent.com/58491146/81103691-b5785680-8f11-11ea-8e08-95bf24fe0a46.png)
