@@ -75,6 +75,9 @@ per te kompajluar (jep argumentet sipas sintakses ne vazhdim)
 ✸ Komanda delete-user :
 
 → java Main delete-user <emriUserit>
+  
+  ![Delete-User](https://user-images.githubusercontent.com/58491146/81103169-f58b0980-8f10-11ea-9b49-d096d9296917.png)
+
 
 
 
