@@ -68,7 +68,7 @@ per te kompajluar (jep argumentet sipas sintakses ne vazhdim)
 
 ✸ Komanda Create-User :
 
-→ java Main create-user <emriUserit>
+→ java Main create-user emri
 
 ![Create-User](https://user-images.githubusercontent.com/58491146/81102779-67af1e80-8f10-11ea-81fc-5ee77a26829c.png)
 
@@ -81,20 +81,20 @@ per te kompajluar (jep argumentet sipas sintakses ne vazhdim)
   
  ✸ Komanda export-key 
   
-  → java Main export-key <public|private> <name> [file]
+  → java Main export-key public|private emri file
 
 
 ![Export-Key](https://user-images.githubusercontent.com/58491146/81103691-b5785680-8f11-11ea-8e08-95bf24fe0a46.png)
 
  ✸ Komanda write-message
  
- → java Main write-message <name> <message> [file]
+ → java Main write-message name message file
   
   ![Write-message](https://user-images.githubusercontent.com/58491146/81122705-c638c480-8f31-11ea-8b0d-3770701d953d.png)
   
  ✸ Komanda read-message
   
- →  java Main read-message <encrypted-message>
+ →  java Main read-message encrypted-message
   
   ![Read-message](https://user-images.githubusercontent.com/58491146/81123166-b5d51980-8f32-11ea-823e-d595096951e2.png)
 
