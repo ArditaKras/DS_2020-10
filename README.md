@@ -83,7 +83,8 @@ per te kompajluar (jep argumentet sipas sintakses ne vazhdim)
   
   → java Main export-key public|private emri file
 
-![Export](https://user-images.githubusercontent.com/58491146/81124417-a3101400-8f35-11ea-9886-8fc9473f8ed0.png)
+![Export1](https://user-images.githubusercontent.com/58491146/81124604-26ca0080-8f36-11ea-929f-502f62b5a3f2.png)
+
 
  ✸ Komanda import-key
  
