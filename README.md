@@ -85,6 +85,12 @@ per te kompajluar (jep argumentet sipas sintakses ne vazhdim)
 
 ![Export](https://user-images.githubusercontent.com/58491146/81124417-a3101400-8f35-11ea-9886-8fc9473f8ed0.png)
 
+ ✸ Komanda import-key
+ 
+   → java Main import-key <name> <path>
+ 
+ ![Import](https://user-images.githubusercontent.com/58491146/81124495-dc488400-8f35-11ea-8d41-c9adae60dc05.png)
+
  ✸ Komanda write-message
  
  → java Main write-message name message file
