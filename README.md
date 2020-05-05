@@ -68,7 +68,14 @@ per te kompajluar (jep argumentet sipas sintakses ne vazhdim)
 
 ✸ Komanda Create-User :
 
+→ java Main create-user <emriUserit>
+
 ![Create-User](https://user-images.githubusercontent.com/58491146/81102779-67af1e80-8f10-11ea-81fc-5ee77a26829c.png)
+
+✸ Komanda delete-user :
+
+→ java Main delete-user <emriUserit>
+
 
 
 
