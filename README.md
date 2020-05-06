@@ -123,3 +123,4 @@ Morse Code Audio bazuar ne:
 FazaII:
 ➣ https://www.novixys.com/blog/rsa-file-encryption-decryption-java/
 ➣ https://en.wikipedia.org/wiki/RSA_(cryptosystem)#Key_generation
+➣ https://stackoverflow.com/questions/11410770/load-rsa-public-key-from-file
