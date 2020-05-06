@@ -87,7 +87,7 @@ public class Write {
 			String enkodimiBase64 = Base64.getEncoder()
                     .encodeToString(iv.getBytes(StandardCharsets.UTF_8.toString()));
 	    	
-	    	Metodat rsaObj = new Metodat();
+	    	Write rsaObj = new Write();
     		byte [] bajtaRandomKEY = new byte[8]; 
     		sr.nextBytes(bajtaRandomKEY); 	      
     		String KEY = bajtaRandomKEY.toString();
@@ -130,7 +130,7 @@ public class Write {
 				String enkodimiBase64 = Base64.getEncoder()
 	                    .encodeToString(iv.getBytes(StandardCharsets.UTF_8.toString()));
 		    	
-		    	Metodat rsaObj = new Metodat();
+		    	Write rsaObj = new Write();
 	    		byte [] bajtaRandomKEY = new byte[8]; 
 	    		sr.nextBytes(bajtaRandomKEY); 	      
 	    		String KEY = bajtaRandomKEY.toString();
