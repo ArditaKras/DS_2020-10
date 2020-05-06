@@ -61,6 +61,19 @@ public class Write {
         boolean exists = tempFile.exists();
         return exists;
     }   
+	byte[] encryptData(String data) throws IOException {
+		byte[] dataToEncrypt = data.getBytes();
+		byte[] encryptedData = null;
+		try {
+		Cipher cipher = Cipher.getInstance("RSA");
+		cipher.init(Cipher.ENCRYPT_MODE, publicKey);
+		encryptedData = cipher.doFinal(dataToEncrypt);	
+		} catch ( NoSuchAlgorithmException | NoSuchPaddingException | InvalidKeyException |
+											IllegalBlockSizeException | BadPaddingException e) {
+			e.printStackTrace();
+		}
+		return encryptedData;
+	}
 
 	public void Write(String name,String message,String file) throws IOException, NoSuchAlgorithmException, NoSuchPaddingException,
 	    															InvalidKeyException, IllegalBlockSizeException, BadPaddingException {	
