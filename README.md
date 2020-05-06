@@ -121,6 +121,13 @@ Morse Code Audio bazuar ne:
 ➣ https://gist.github.com/Xyene/6478305 
 
 FazaII:
+
 ➣ https://www.novixys.com/blog/rsa-file-encryption-decryption-java/
+
 ➣ https://en.wikipedia.org/wiki/RSA_(cryptosystem)#Key_generation
+
 ➣ https://stackoverflow.com/questions/11410770/load-rsa-public-key-from-file
+
+➣ https://security.stackexchange.com/questions/3779/how-can-i-export-my-private-key-from-a-java-keytool-keystore
+
+➣ YOUTUBE  Different Tutorials
