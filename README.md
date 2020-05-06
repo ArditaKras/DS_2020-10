@@ -130,4 +130,6 @@ FazaII:
 
 ➣ https://security.stackexchange.com/questions/3779/how-can-i-export-my-private-key-from-a-java-keytool-keystore
 
+➣ https://www.codota.com/code/java/methods/java.security.KeyPairGenerator/generateKeyPair
+
 ➣ YOUTUBE  Different Tutorials
