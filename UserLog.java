@@ -10,7 +10,7 @@ import java.sql.Statement;
 import java.util.Scanner;
 
 
-public class SqlConnector {
+public class UserLog {
 	     
 	
 	public static void createuser(String name, String pasi1, String pasi2) throws NoSuchAlgorithmException, IOException {
@@ -18,18 +18,18 @@ public class SqlConnector {
 		Create C= new Create();
 	       
 		try {
-				//Creating Connection Object
+				
 	            Connection connection=DriverManager.getConnection("jdbc:mysql://localhost:3307/eclipse","root","balajendrit");
-	            //Preapared Statement
+
 	            PreparedStatement Pstatement=connection.prepareStatement("insert into student values(?,?,?)");
-	            //Specifying the values of it's parameter
+
 	            Pstatement.setString(1,name);
 	            Pstatement.setString(2,encodePass(pasi1));
 	            Pstatement.setString(3,encodePass(pasi2));
-	            //Checking for the Password match
+
 	            if(pasi1.equalsIgnoreCase(pasi2))
 	            {
-	                //Executing query
+
 	                Pstatement.executeUpdate();
 	                C.CreateUser(name);
 	            }
@@ -50,14 +50,12 @@ public class SqlConnector {
 		 try{
 			 Connection connection=DriverManager.getConnection("jdbc:mysql://localhost:3307/eclipse","root","balajendrit");
 		      
-		      // create the mysql delete statement.
-		      // i'm deleting the row where the id is "3", which corresponds to my
-		      // "Barney Rubble" record.
+
 		      String query = "delete from student where USERNAME= ?";
 		      PreparedStatement preparedStmt = connection.prepareStatement(query);
 		      preparedStmt.setString(1, name);
 
-		      // execute the preparedstatement
+
 		      preparedStmt.execute();
 		      D.Delete(name);
 		      connection.close();
@@ -97,20 +95,14 @@ public class SqlConnector {
 		String passwordToHash = name;
         String generatedPassword = null;
         try {
-	            // Create MessageDigest instance for MD5
 	            MessageDigest md = MessageDigest.getInstance("MD5");
-	            //Add password bytes to digest
 	            md.update(passwordToHash.getBytes());
-	            //Get the hash's bytes 
 	            byte[] bytes = md.digest();
-	            //This bytes[] has bytes in decimal format;
-	            //Convert it to hexadecimal format
 	            StringBuilder sb = new StringBuilder();
 	            for(int i=0; i< bytes.length ;i++)
 	            {
 	                sb.append(Integer.toString((bytes[i] & 0xff) + 0x100, 16).substring(1));
 	            }
-	            //Get complete hashed password in hex format
 	            generatedPassword = sb.toString();
         	} 
         catch (NoSuchAlgorithmException e) 
