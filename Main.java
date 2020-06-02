@@ -80,7 +80,7 @@ public class Main {
             		 if (Password_Validation(pasi1)) {
             			 System.out.println("Sheno prape ");
                  		 String pasi2 = input.next();
-                 		 SqlConnector.createuser(args[1], pasi1, pasi2);	
+                 		 UserLog.createuser(args[1], pasi1, pasi2);	
             		 }
             		 else {
             			System.out.println("Paswordi duhet te permbaje nje numer ose simbol.");
@@ -99,12 +99,12 @@ public class Main {
         else if (args[0].equals("login")) {
         	System.out.println("Jepni fjalekalimin");
         	String pasi = input.next();
-        	SqlConnector.loginPass(args[1],pasi);
+        	UserLog.loginPass(args[1],pasi);
 			
 		}
            else if(args[0].equals("delete-user")) {
            try {
-               SqlConnector.deleteUser(args[1]);
+               UserLog.deleteUser(args[1]);
 		} catch (Exception e2) {
 			// TODO: handle exception
 		}
