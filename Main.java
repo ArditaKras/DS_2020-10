@@ -1,7 +1,13 @@
 import javax.sound.sampled.*;
+
 import java.io.IOException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
+import java.sql.SQLException;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
@@ -9,15 +15,16 @@ import javax.crypto.NoSuchPaddingException;
 public class Main {
   public static void main(String[] args)throws IOException, LineUnavailableException, InterruptedException, 
                             ArrayIndexOutOfBoundsException, NoSuchAlgorithmException, InvalidKeyException, 
-                            NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException {
-        Morse M = new Morse();
+                            NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException, SQLException {
+      Scanner input = new Scanner(System.in);
+	  	Morse M = new Morse();
         Create C= new Create();
         Delete D=  new Delete();
         Export E=  new Export();
         Import I=  new Import();
         Write  W=  new Write();
         Read   R=  new Read();
-        
+      
         C.writeToFile("RSA/publicKey", C.getPublicKey().getEncoded());
         C.writeToFile("RSA/privateKey", C.getPrivateKey().getEncoded());
         
@@ -67,14 +74,42 @@ public class Main {
         
         if(args[0].equals("create-user")) {
             if(args[1].matches("^[a-zA-Z0-9._]+")) {
-                C.CreateUser(args[1]);
+            	try {
+            		System.out.println("Jep fjalekalimin ");
+            		String pasi1 = input.next();
+            		 if (Password_Validation(pasi1)) {
+            			 System.out.println("Sheno prape ");
+                 		 String pasi2 = input.next();
+                 		 SqlConnector.createuser(args[1], pasi1, pasi2);	
+            		 }
+            		 else {
+            			System.out.println("Paswordi duhet te permbaje nje numer ose simbol.");
+					}
+            		
+                }
+            	catch (Exception e2) {
+					// TODO: handle exception
+				}
+            	
             }
             else {
                 System.out.println("Keni shenuar gabim. Lejohen vetem shkronjat,numrat dhe . _ ] +");
             }
         }
+        else if (args[0].equals("login")) {
+        	System.out.println("Jepni fjalekalimin");
+        	String pasi = input.next();
+        	SqlConnector.loginPass(args[1],pasi);
+			
+		}
            else if(args[0].equals("delete-user")) {
-            D.Delete(args[1]);
+           try {
+               SqlConnector.deleteUser(args[1]);
+		} catch (Exception e2) {
+			// TODO: handle exception
+		}
+        	
+            
         }
         else if(args[0].equals("export-key")) {
             if(args.length == 3) {
@@ -89,11 +124,13 @@ public class Main {
 
         }
            else if(args[0].equals("write-message")) {
+        	 
             if(args.length == 3) {
                 W.Write(args[1], args[2]);
             }
             else {
                 W.Write(args[1], args[2],args[3]);
+                
             }
         }
       
@@ -103,6 +140,27 @@ public class Main {
         else {
             System.exit(0);
         }
-   
+  
+        input.close();
     }
+  public static boolean Password_Validation(String password) 
+  {
+
+      if(password.length()>=6)
+      {
+          Pattern digit = Pattern.compile("[0-9]");
+          Pattern special = Pattern.compile ("[!@#$%&*()_+=|<>?{}\\[\\]~-]");
+          //Pattern eight = Pattern.compile (".{8}");
+
+             Matcher hasDigit = digit.matcher(password);
+             Matcher hasSpecial = special.matcher(password);
+
+             return hasDigit.find() || hasSpecial.find();
+
+      }
+      else
+          return false;
+
+  }
+
 }
