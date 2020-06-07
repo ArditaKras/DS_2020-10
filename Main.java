@@ -102,6 +102,9 @@ public class Main {
         	UserLog.loginPass(args[1],pasi);
 			
 		}
+        else if (args[0].equals("status")) {
+        	UserLog.getStatus(args[1]);
+        }
            else if(args[0].equals("delete-user")) {
            try {
                UserLog.deleteUser(args[1]);
@@ -128,14 +131,22 @@ public class Main {
             if(args.length == 3) {
                 W.Write(args[1], args[2]);
             }
-            else {
+            else if(args.length==4) {
                 W.Write(args[1], args[2],args[3]);
                 
             }
+            else {
+				W.Write(args[1],args[2],args[3],args[4]);
+			}
         }
       
         else if(args[0].equals("read-message")) {
-            R.Read_Message(args[1]);
+        	if (countChar(args[1],'.')<4) {
+        	     R.Read_Message(args[1]);
+			} else {
+	            R.Read_Message1(args[1]);
+			}
+       
         }
         else {
             System.exit(0);
@@ -143,24 +154,35 @@ public class Main {
   
         input.close();
     }
-  public static boolean Password_Validation(String password) 
-  {
-
-      if(password.length()>=6)
-      {
-          Pattern digit = Pattern.compile("[0-9]");
-          Pattern special = Pattern.compile ("[!@#$%&*()_+=|<>?{}\\[\\]~-]");
-          //Pattern eight = Pattern.compile (".{8}");
-
-             Matcher hasDigit = digit.matcher(password);
-             Matcher hasSpecial = special.matcher(password);
-
-             return hasDigit.find() || hasSpecial.find();
-
-      }
-      else
-          return false;
-
-  }
-
+	  public static boolean Password_Validation(String password) 
+	  {
+	
+	      if(password.length()>=6)
+	      {
+	          Pattern digit = Pattern.compile("[0-9]");
+	          Pattern special = Pattern.compile ("[!@#$%&*()_+=|<>?{}\\[\\]~-]");
+	          //Pattern eight = Pattern.compile (".{8}");
+	
+	             Matcher hasDigit = digit.matcher(password);
+	             Matcher hasSpecial = special.matcher(password);
+	
+	             return hasDigit.find() || hasSpecial.find();
+	
+	      }
+	      else
+	          return false;
+	
+	  }
+	  public static int countChar(String str, char c)
+	  {
+	      int count = 0;
+	
+	      for(int i=0; i < str.length(); i++)
+	      {    if(str.charAt(i) == c)
+	              count++;
+	      }
+	
+	      return count;
+	  }
 }
+
