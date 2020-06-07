@@ -36,7 +36,7 @@ public class Create {
 	Base64.Encoder encoder = Base64.getEncoder();
 
   
-
+	
     BigInteger n = ((RSAKey) privKey).getModulus();
     BigInteger e = ((RSAPrivateCrtKey) privKey).getPublicExponent();
     BigInteger p = ((RSAPrivateCrtKey) privKey).getPrimeP();
@@ -96,29 +96,35 @@ public class Create {
 	public void CreateUser(String name) throws IOException {		    
 			Boolean existsPrivat = FileExists(name, Path, ".xml");
 			Boolean existsPublik = FileExists(name, Path, ".pub.xml");
-			if(!(existsPrivat && existsPublik)){
-		    	Person celsiPrivat = new Person(N,E,P,Q,DP,DQ,INVERSEQ,D);
-		        FileOutputStream ruajCelsinPrivat = new FileOutputStream(new File("keys\\\\"
-		        																	+ name +".xml"));
-				XMLEncoder enkoderiCelsitPrivat = new XMLEncoder(ruajCelsinPrivat);
-				enkoderiCelsitPrivat.writeObject(celsiPrivat);
-				enkoderiCelsitPrivat.close();
-				ruajCelsinPrivat.close();
+			try {
+				if(!(existsPrivat && existsPublik)){
+			    	Person celsiPrivat = new Person(N,E,P,Q,DP,DQ,INVERSEQ,D);
+			        FileOutputStream ruajCelsinPrivat = new FileOutputStream(new File("keys\\\\"
+			        																	+ name +".xml"));
+					XMLEncoder enkoderiCelsitPrivat = new XMLEncoder(ruajCelsinPrivat);
+					enkoderiCelsitPrivat.writeObject(celsiPrivat);
+					enkoderiCelsitPrivat.close();
+					ruajCelsinPrivat.close();
+					
+			        Person celsiPublik = new Person(N,E);
+					FileOutputStream ruajCelsinPublik = new FileOutputStream(new File("keys\\\\"
+																			+ name +".pub.xml"));
+					XMLEncoder enkoderiCelsitPublik = new XMLEncoder(ruajCelsinPublik);
+					enkoderiCelsitPublik.writeObject(celsiPublik);
+					enkoderiCelsitPublik.close();
+					ruajCelsinPublik.close();
+					System.out.println("Eshte krijuar shfrytezuesi '" + name + "'");
+					System.out.println("Eshte krijuar celesi privat 'keys/" + name + ".xml'");
+					System.out.println("Eshte krijuar celesi publik 'keys/" + name + ".pub.xml'");
+				}
+				else{
+					System.out.print("Gabim: Celesi '" + name + "' ekziston paraprakisht.");
+				}
 				
-		        Person celsiPublik = new Person(N,E);
-				FileOutputStream ruajCelsinPublik = new FileOutputStream(new File("keys\\\\"
-																		+ name +".pub.xml"));
-				XMLEncoder enkoderiCelsitPublik = new XMLEncoder(ruajCelsinPublik);
-				enkoderiCelsitPublik.writeObject(celsiPublik);
-				enkoderiCelsitPublik.close();
-				ruajCelsinPublik.close();
-				
-				System.out.println("Eshte krijuar celesi privat 'keys/" + name + ".xml'");
-				System.out.println("Eshte krijuar celesi publik 'keys/" + name + ".pub.xml'");
+			} catch (Exception e) {
+				// TODO: handle exception
 			}
-			else{
-				System.out.print("Gabim: Celesi '" + name + "' ekziston paraprakisht.");
-			}
+			
 		}
 	
 
