@@ -74,6 +74,50 @@ public class Write {
 		}
 		return encryptedData;
 	}
+	
+	public void Write(String name,String message,String sender,String token) throws IOException, NoSuchAlgorithmException, NoSuchPaddingException,
+	InvalidKeyException, IllegalBlockSizeException, BadPaddingException {	
+		
+		String enkodimiBaze64UTF8 = Base64.getEncoder()
+		.encodeToString(name.getBytes(StandardCharsets.UTF_8.toString()));
+		
+		SecureRandom sr = new SecureRandom(); 
+		byte [] bajtaRandomIV = new byte[8];  
+		sr.nextBytes(bajtaRandomIV); 		  
+		String iv = bajtaRandomIV.toString();
+		String enkodimiBase64 = Base64.getEncoder()
+		.encodeToString(iv.getBytes(StandardCharsets.UTF_8.toString()));
+		
+		Write rsaObj = new Write();
+		byte [] bajtaRandomKEY = new byte[8]; 
+		sr.nextBytes(bajtaRandomKEY); 	      
+		String KEY = bajtaRandomKEY.toString();
+		byte[] encryptedData = rsaObj.encryptData(KEY);
+		String rsa = encryptedData.toString();
+		String enkodimiBase64RSA = Base64.getEncoder()
+		.encodeToString(rsa.getBytes(StandardCharsets.UTF_8.toString()));
+		
+		SecretKey key = KeyGenerator.getInstance("DES").generateKey();
+		Cipher cipher = Cipher.getInstance("DES");
+		cipher.init(Cipher.ENCRYPT_MODE, key);			
+		String enkodimiBase64DES = Base64.getEncoder()
+		.encodeToString(message.getBytes(StandardCharsets.UTF_8.toString()));
+		
+		String enkodimiBaze64UTF8Sender = Base64.getEncoder()
+				.encodeToString(sender.getBytes(StandardCharsets.UTF_8.toString()));
+		
+		SecretKey key1 = KeyGenerator.getInstance("DES").generateKey();
+		Cipher cipher1 = Cipher.getInstance("DES");
+		cipher1.init(Cipher.ENCRYPT_MODE, key1);			
+		String enkodimiBase64DESToken = Base64.getEncoder()
+		.encodeToString(token.getBytes(StandardCharsets.UTF_8.toString()));
+		
+		String ciphertext = enkodimiBaze64UTF8 + "." + enkodimiBase64 + "." + enkodimiBase64RSA + "." + enkodimiBase64DES
+							+ "." + enkodimiBaze64UTF8Sender + "." + enkodimiBase64DESToken;
+		System.out.println(ciphertext);
+
+		
+}
 
 	public void Write(String name,String message,String file) throws IOException, NoSuchAlgorithmException, NoSuchPaddingException,
 	    															InvalidKeyException, IllegalBlockSizeException, BadPaddingException {	
