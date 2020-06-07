@@ -171,3 +171,8 @@ FazaII:
 ➣ https://www.codota.com/code/java/methods/java.security.KeyPairGenerator/generateKeyPair
 
 ➣ YOUTUBE  Different Tutorials
+
+FAZA III:
+
+➣ https://howtodoinjava.com/security/how-to-generate-secure-password-hash-md5-sha-pbkdf2-bcrypt-examples/
+➣ YOUTUBE  Different Tutorials
