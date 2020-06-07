@@ -47,6 +47,7 @@ public class Delete {
 		    		File celsiPrivat = new File(Path + name + ".xml");
 		    		celsiPublik.delete();
 		    		celsiPrivat.delete();
+		    		System.out.println("Eshte larguar shfrytezuesi " + name);
 		    		System.out.println("Eshte larguar celesi privat 'keys/" + name + ".xml'");
 		    		System.out.println("Eshte larguar celesi publik 'keys/" + name + ".pub.xml'");
 		    	}
@@ -65,9 +66,5 @@ public class Delete {
 		    	}	
 		    }
 		
-
-
-
-
 
 }
