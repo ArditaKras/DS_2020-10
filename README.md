@@ -105,8 +105,11 @@ per te kompajluar (jep argumentet sipas sintakses ne vazhdim)
   ![Read-message](https://user-images.githubusercontent.com/58491146/81123166-b5d51980-8f32-11ea-823e-d595096951e2.png)
 
 
+✸ Komanda Create-User :
 
+→ java Main create-user emri
 
+file:///C:/Users/Lenovo/Desktop/imgs/create.PNG
 
 
 
