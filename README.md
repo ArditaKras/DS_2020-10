@@ -104,15 +104,50 @@ per te kompajluar (jep argumentet sipas sintakses ne vazhdim)
   
   ![Read-message](https://user-images.githubusercontent.com/58491146/81123166-b5d51980-8f32-11ea-823e-d595096951e2.png)
 
+✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸✸
+
+Faza e trete
 
 ✸ Komanda Create-User :
 
 → java Main create-user emri
 
-file:///C:/Users/Lenovo/Desktop/imgs/create.PNG
+  ![Create-User](https://github.com/ArditaKras/Ds-2020-Gr10/blob/master/testImages/create-user.PNG)
 
+✸ Komanda Delete-User :
 
+→ java Main delete-user <emriUserit>
+  
+  ![Delete-User](https://github.com/ArditaKras/Ds-2020-Gr10/blob/master/testImages/delete-user.PNG)
 
+✸ Komanda Login :
+
+→ java Main login <emriUserit>
+  
+  ![Login](https://github.com/ArditaKras/Ds-2020-Gr10/blob/master/testImages/login.PNG)
+
+✸ Komanda Status :
+
+→ java Main status <tokeni>
+  
+  ![Login](https://github.com/ArditaKras/Ds-2020-Gr10/blob/master/testImages/status.PNG)
+  
+✸ Komanda Write-Message
+ 
+ → java Main write-message name message derguesi <tokeni>
+  
+  ![Write-Message](https://github.com/ArditaKras/Ds-2020-Gr10/blob/master/testImages/write-message.PNG)
+  
+✸ Komanda Read-Message
+  
+ →  java Main read-message encrypted-message
+  
+  ![Read-message](https://github.com/ArditaKras/Ds-2020-Gr10/blob/master/testImages/read-message.PNG)  
+  
+✸ Ruajtja e te dhenave ne databaze.
+
+  ![Read-message](https://github.com/ArditaKras/Ds-2020-Gr10/blob/master/testImages/database.PNG) 
+  
 
 
 REFERENCAT:
